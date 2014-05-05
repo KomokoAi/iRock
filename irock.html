@@ -3,12 +3,18 @@
 		<title>iRock - The Virtual Pet Rock</title>
 		
 		<script type="text/javascript">
-			
+			var userName;
+			function greetUser() {
+				alert('Hello,I am your pet rock.');
+			}
 			function touchRock() {
-				var userName = prompt("What is your name?", "Enter your name here.");
-
 				if (userName) {
-					alert("It is good to meet you, " + userName + ".");
+					alert("I like the attention, " + userName + ". Thank you.");
+				}
+				else {
+					userName	= prompt("What is your name?", "Enter your name here.");
+					if (userName) 
+						alert("It is good to meet you, " + userName + ".");
 				}
 				document.getElementById("rockImg").src = "rock_happy.png";
 				setTimeout("document.getElementById('rockImg').src ='rock.png';", 10000);
