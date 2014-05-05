@@ -3,13 +3,15 @@
 		<title>iRock - The Virtual Pet Rock</title>
 		
 		<script type="text/javascript">
+			
 			function touchRock() {
 				var userName = prompt("What is your name?", "Enter your name here.");
 
 				if (userName) {
 					alert("It is good to meet you, " + userName + ".");
-					document.getElementById("rockImg").src = "rock_happy.png";
 				}
+				document.getElementById("rockImg").src = "rock_happy.png";
+				setTimeout("document.getElementById('rockImg').src ='rock.png';", 10000);
 			}
 		</script>
 	</head>
@@ -21,3 +23,4 @@
 		</div>
 	</body>
 </html>
+
